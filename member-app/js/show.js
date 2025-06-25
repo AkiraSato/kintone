@@ -7,15 +7,7 @@
     const record = event.record;
     const rec = kintone.app.record;
 
-    return event;
-  });
-
-  kintone.events.on(e.prtShow, (event) => {
-    const record = event.record;
-    const rec = kintone.app.record;
-
-    window.hideAllFields(record);
-    window.skillSheetPrint(record, rec);
+    console.log(0);
 
     return event;
   });
