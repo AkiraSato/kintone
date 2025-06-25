@@ -1,7 +1,3 @@
-window.difinition = {
-  apiToken: "z5yAOJ4cbc3iw3zdcLFxN7CTFM63Cf9V0gC6QYdN",
-};
-
 window.eventHandle = {
   idxShow: "app.record.index.show",
   idxEdtShow: "app.record.index.edit.show",
