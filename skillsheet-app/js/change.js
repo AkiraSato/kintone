@@ -2,6 +2,11 @@
   "use strict";
 
   const e = window.eventHandle;
+  const fld = window.fields;
+
+  const start = fld.startDate;
+  const end = fld.endDate;
+
   const evChg = [
     e.crtChg + start,
     e.crtChg + end,

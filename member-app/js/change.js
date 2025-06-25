@@ -11,11 +11,7 @@
   kintone.events.on(evBirthChg, function (event) {
     const record = event.record;
     // 年齢を計算
-    const age = window.ageCalc(record);
-
-    // 年齢を表示用フィールドに代入
-    record[fld.age].value = String(age);
-
+    window.ageCalc(record);
     return event;
   });
 })();
