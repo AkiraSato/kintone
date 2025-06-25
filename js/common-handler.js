@@ -3,6 +3,13 @@
 
   const fld = window.fields;
 
+  // 全フィールド非表示
+  window.hideAllFields = function (record) {
+    for (const fieldCode in record) {
+      kintone.app.record.setFieldShown(fieldCode, false);
+    }
+  };
+
   //年齢計算
   window.ageCalc = function (record) {
     // 生年月日フィールドの値を取得
