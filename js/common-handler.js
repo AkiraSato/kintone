@@ -13,7 +13,7 @@
   //年齢計算
   window.ageCalc = function (record) {
     // 生年月日フィールドの値を取得
-    const birthStr = record[birthDate]?.value;
+    const birthStr = record[fld.birthDate]?.value;
     if (!birthStr) return event;
 
     // 年齢を計算する関数
