@@ -17,7 +17,7 @@
   kintone.events.on(evChg, function (event) {
     const record = event.record;
 
-    window.durationCalc(record);
+    window.durationCalc(record, start, end);
 
     return event;
   });

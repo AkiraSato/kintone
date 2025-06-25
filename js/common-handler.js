@@ -42,7 +42,9 @@
   };
 
   //期間計算
-  window.durationCalc = function (record) {
+  window.durationCalc = function (record, start, end) {
+    const experience = fld.experience;
+    const period = fld.projectDuration;
     if (!record[experience] || !Array.isArray(record[experience].value)) {
       return false;
     }
