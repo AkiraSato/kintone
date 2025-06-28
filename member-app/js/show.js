@@ -7,8 +7,6 @@
     const record = event.record;
     const rec = kintone.app.record;
 
-    console.log(0);
-
     return event;
   });
 })();
