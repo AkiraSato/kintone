@@ -7,6 +7,8 @@
   const start = fld.startDate;
   const end = fld.endDate;
 
+  console.log(start);
+
   const evChg = [
     e.crtChg + start,
     e.crtChg + end,
