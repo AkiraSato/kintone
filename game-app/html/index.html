@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ドラクエ風 戦闘画面</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- 名前入力画面 -->
+    <div class="name-screen" id="name-screen">
+      <p>あなたの名前を入力してください</p>
+      <input
+        type="text"
+        id="player-name-input"
+        maxlength="10"
+        placeholder="ゆうしゃ"
+      />
+      <br /><br />
+      <p>敵の名前を入力してください</p>
+      <input
+        type="text"
+        id="enemy-name-input"
+        maxlength="10"
+        placeholder="スライム"
+      />
+      <p>敵の画像を選択してください</p>
+      <input type="file" id="enemy-img-input" accept="image/*" />
+      <br /><br />
+      <button onclick="startGame()">スタート</button>
+    </div>
+
+    <!-- 戦闘画面（最初は非表示） -->
+    <div class="battle-screen" id="battle-screen" style="display: none">
+      <div class="enemy-area">
+        <div class="enemy-name" id="enemy-name">スライム</div>
+        <img
+          id="enemy-image"
+          src=""
+          alt="敵の画像"
+          style="max-width: 100px; display: none"
+        />
+      </div>
+
+      <div class="player-status">
+        <p id="player-name">ゆうしゃ</p>
+        <p>HP: <span id="player-hp">20</span> / 20</p>
+        <p>MP: <span id="player-mp">5</span> / 5</p>
+      </div>
+
+      <div id="command-menu" class="command-menu">
+        <button onclick="attack()">たたかう</button>
+        <button onclick="escape()">にげる</button>
+      </div>
+
+      <div class="message-box" id="message-box">どうする？</div>
+    </div>
+
+    <!-- 名前入力画面 -->
+    <div class="end-screen" id="end-screen" style="display: none">
+      <p>またあそんでね！</p>
+      <button onclick="location.reload()">もう一回遊ぶ</button>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
