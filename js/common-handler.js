@@ -10,6 +10,20 @@
     }
   };
 
+  // フィールド非活性、非表示
+  window.convertFields = function (record, rec) {
+    const ex = fld.experience;
+    const pd = fld.projectDuration;
+
+    const tableRows = record[ex].value;
+
+    for (let i = 0; i < tableRows.length; i++) {
+      tableRows[i].value[pd].disabled = true;
+    }
+
+    rec.setFieldShown(fld.term, false);
+  };
+
   //年齢計算
   window.ageCalc = function (record) {
     // 生年月日フィールドの値を取得
