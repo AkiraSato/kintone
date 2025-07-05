@@ -2,6 +2,16 @@ let enemyHP = 20;
 let playerName = sessionStorage.getItem("playerName") || "ゆうしゃ";
 let enemyName = sessionStorage.getItem("enemyName") || "スライム";
 
+const character = [
+  {
+    id: "player1",
+    name: playerName,
+    hp: 20,
+    atkMin: 3,
+    atkMax: 10,
+  },
+];
+
 function startGame() {
   const nameInput = document.getElementById("player-name-input").value.trim();
   const enemyNameInput = document
@@ -16,7 +26,6 @@ function startGame() {
   sessionStorage.setItem("enemyName", enemyName);
 
   document.getElementById("player-name").innerText = playerName;
-  document.getElementById("enemy-name").innerText = enemyName;
 
   // 敵画像の読み込み処理
   if (enemyImageInput.files.length > 0) {
@@ -33,6 +42,7 @@ function startGame() {
   // 表示切り替え
   document.getElementById("name-screen").style.display = "none";
   document.getElementById("battle-screen").style.display = "block";
+  document.getElementById("enemy-image").style.display = "block";
 
   document.getElementById(
     "message-box"
@@ -50,6 +60,7 @@ function attack() {
 
   if (enemyHP === 0) {
     setTimeout(() => {
+      document.getElementById("enemy-image").style.display = "none";
       document.getElementById(
         "message-box"
       ).innerText = `${enemyName}をたおした！`;

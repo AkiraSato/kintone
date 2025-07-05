@@ -38,7 +38,9 @@ button {
 }
 
 .enemy-area {
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; /* 横中央 */
+  align-items: center; /* 縦中央 */
 }
 
 .enemy-name {
